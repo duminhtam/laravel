@@ -3,8 +3,6 @@
 
 class ChoTotController extends BaseController {
 
-
-
     public function getIndex()
     {
         $chotot = new ChoTot();

@@ -14,6 +14,7 @@ class ChoTot extends Eloquent{
 
     /**
      * Get the default configuration base on const
+     * @return onject
      * */
     public function getConfig(){
         return (object) array("max_cols" => self::CONFIG_MAX_COLS, "runInterval" => self::CONFIG_RUN_INTERVAL, "idleInterval" => self::CONFIG_IDLE_INTERVAL);
@@ -112,7 +113,7 @@ class ChoTot extends Eloquent{
         foreach(Input::get('ads') as $ad){
             $ad['id'] = intval($ad['id']);
             $ad['col'] = intval($ad['col']);
-            
+
             $col .= " WHEN {$ad['id']} THEN {$ad['col']} ";
             $row .= " WHEN {$ad['id']} THEN {$ad['row']} ";
             array_push($in, $ad['id']);
