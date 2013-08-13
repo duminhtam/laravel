@@ -60,8 +60,7 @@ Change the owner of all file and folder to <code>apache:root</code>
 
 #### Apache virtual host configuration
 My project root is located at <code>/apache/laravel</code> and the virtual host <code>DocumentRoot</code> must be pointed to <code>/apache/laravel/public</code>
- <pre>
- ```
+ ```php
 NameVirtualHost *:80
 <VirtualHost *:80>
 DocumentRoot /apache/laravel/public
@@ -72,7 +71,6 @@ ServerName laravel.local
  </Directory>
 </VirtualHost>
  ```
- </pre>
 #### Linux Command Alias
 Some <b>linux command alias</b> that will be used in my readme file
 my <code>composer.phar</code> is located in <code>/root/composer.phar</code>
