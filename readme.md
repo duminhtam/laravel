@@ -90,6 +90,9 @@ This will create script and css to compiled folder
 
 <code>artisan basset:build -p chotot</code>
 
+Configuration is located in
+
+<code>app/config/packages/jasonlewis/basset/config.php</code>
 #### Environment
 The default environment is <code>production</code>, you can keep this to run without complex config or you can configure as local, take a look at [laravel environment configuration](http://four.laravel.com/docs/configuration) (sorry I dont have enough time for document it).  
 [Change and view machine name tutorial](http://www.cyberciti.biz/faq/howto-change-my-hostname-machine-name/) if use want to change environment.
