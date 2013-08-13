@@ -110,6 +110,9 @@ class ChoTot extends Eloquent{
         $col = null;
         $in       = array();
         foreach(Input::get('ads') as $ad){
+            $ad['id'] = intval($ad['id']);
+            $ad['col'] = intval($ad['col']);
+            
             $col .= " WHEN {$ad['id']} THEN {$ad['col']} ";
             $row .= " WHEN {$ad['id']} THEN {$ad['row']} ";
             array_push($in, $ad['id']);
