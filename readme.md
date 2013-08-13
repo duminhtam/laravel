@@ -8,7 +8,7 @@ The Laravel framework has a few system requirements:
 - MCrypt PHP Extension
 - Apache Webserver
 - CURL with PHP-CURL Extension
-- 
+
 And some of external libraries (included by <code>composer.json</code> file) use in both dev and production environments:
 
 ####require
