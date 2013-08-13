@@ -38,7 +38,7 @@ Install Composer, take a look at [composer installation guide](http://getcompose
 - step 1 - install composer by download the composer.phar  
 <code>curl -sS https://getcomposer.org/installer | php -- --install-dir=/root</code>
 - step 2 - install laravel 4 with composer  
-<code>git clone git://github.com:duminhtam/laravel.git laravel</code>  
+<code>git clone git://github.com/duminhtam/laravel.git laravel</code>
 <code>cd laravel</code>  
 <code>composer install --dev</code> <i>this will install with dev packages</i>
 
