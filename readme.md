@@ -42,14 +42,14 @@ Install Composer, take a look at [composer installation guide](http://getcompose
 <code>cd laravel</code>  
 <code>composer install --dev</code> <i>this will install with dev packages</i>
 
-<pre>
+```php
     <code>
             'Basset\BassetServiceProvider'
             'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
             'Way\Generators\GeneratorsServiceProvider'
             'Way\Console\GuardLaravelServiceProvider'
     </code>
-</pre>
+```
 and aliases also </i>(in app.php bottom)</i>   
 
 <code>
@@ -78,11 +78,11 @@ ServerName laravel.local
 #### Linux Command Alias
 Some <b>linux command alias</b> that will be used in my readme file
 my <code>composer.phar</code> is located in <code>/root/composer.phar</code>
-<pre>
+```php
     alias composer='php /root/composer.phar'
     alias artisan='php artisan'
     alias phpunit='test'
-</pre>
+```
 These <code>command only work when you are at the project root file</code>, my project root <code>apache/laravel</code>, use <code>pwd</code> to view your current work directory. Unless you are in your document root, go to it directory with command <code>cd /apache/laravel</code>
 
 ####Compile CSS and JS
@@ -102,13 +102,13 @@ You can you any database you want with laravel support, please config in <code>a
 <code>
 'default' => 'sqlite',
 </code>  <i>I use sqlite, so that no configuration needed. The database file is located at <code>app/database/production.sqlite</code> <code>production</code> does not mean the environtment, it is only the file name in <code>configuration</code> bellow:</i>.
-<pre>
+```php
     'sqlite' => array(
 		'driver'   => 'sqlite',
 		'database' => __DIR__.'/../database/production.sqlite',
 		'prefix'   => '',
 	),
-</pre>
+```
 
 
 Other database support:  
@@ -117,7 +117,7 @@ Other database support:
 
 A sample <b>mysql</b> config if you want to:
 
-<pre>
+```php
     <code>
     'mysql' => array(  
         		'driver'    => 'mysql',  
@@ -130,7 +130,7 @@ A sample <b>mysql</b> config if you want to:
     			'prefix'    => '',  
     		),  
     </code>
-</pre>
+```
 
 and change the default database engine to <code>mysql</code> in <code>app/config/database.php</code>  
 
@@ -147,7 +147,7 @@ Use artisan to migrate your database, this will <b>create</b>(<code><b>database 
 The migration schema file located in <code>app/config/database/migrations/2013_08_10_061829_create_ads_table.php</code> file.  
 
 This will create the table with <b>structured</b> and <b>view</b> bellow:
-<pre>
+```php
     //file <b>2013_08_10_061829_create_ads_table.php</b>
     <code>
     Schema::create('ads', function(Blueprint $table) {
@@ -175,7 +175,7 @@ This will create the table with <b>structured</b> and <b>view</b> bellow:
                           ORDER BY id DESC;
                           ');
     </code>
-</pre>
+```
 
 Database <code>stucture image</code> (<code>sqlite</code>):
 
@@ -189,12 +189,12 @@ Change the owner of all file and folder to <code>apache:root</code> when run mig
 
 The js configuration is located in <code>app/models/ChoTot.php</code>
 
-<pre>
+```php
     const CONFIG_MAX_COLS = 10; //col
     const CONFIG_RUN_INTERVAL = 1000; //ms
     const CONFIG_IDLE_INTERVAL = 5; //idle second
 
-</pre>
+```
 ### Running
 All routes are configured in <code>app/routes.php</code> file.  
 Framework included index route still be kept
