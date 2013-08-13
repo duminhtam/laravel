@@ -43,7 +43,7 @@ class ChoTotController extends BaseController {
             $newAds = $chotot->getNewAds(Input::get('from')) ;
             if($newAds)
                 return View::make("chotot/push",array("ads"=>$newAds));
-            return Response::json();
+            return Response::make("");
         }
 
         $data['ads'] = $chotot->getAds(Input::get('from'), Input::get('to'));
