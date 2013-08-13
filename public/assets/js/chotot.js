@@ -1,4 +1,4 @@
-var gridster, token, choTot, idle= 0,currentCol = 1, storageID = [],to;
+var gridster, token, choTot, idle= 0,currentCol = 0, storageID = [],to;
 $(function() {
 
     choTot = {
