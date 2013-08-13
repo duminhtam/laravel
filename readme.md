@@ -100,7 +100,7 @@ You can you any database you want with laravel support, please config in <code>a
 'default' => 'sqlite',
 </code>  <i>I use sqlite, so that no configuration needed. The database file is located at <code>app/database/production.sqlite</code> <code>production</code> does not mean the environtment, it is only the file name in <code>configuration</code> bellow:</i>.
 <pre>
-	'sqlite' => array(
+    'sqlite' => array(
 		'driver'   => 'sqlite',
 		'database' => __DIR__.'/../database/production.sqlite',
 		'prefix'   => '',
@@ -177,6 +177,12 @@ This will create the table with <b>structured</b> and <b>view</b> bellow:
 Database <code>stucture image</code> (<code>sqlite</code>):
 
 ![db structure image](http://i.imgur.com/cRQDMpe.png)
+
+Change the owner of all file and folder to <code>apache:root</code> when run migration
+
+<code>chown -R apache:root laravel</code>
+
+
 ### Running
 All routes are configured in <code>app/routes.php</code> file.  
 Framework included index route still be kept

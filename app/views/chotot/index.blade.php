@@ -4,17 +4,14 @@
     <title>
         Chotot.vn Crawler - Build 1
     </title>
-    {{ Basset::show('chotot.css') }}
-    {{ Basset::show('chotot.js') }}
+    @stylesheets('chotot')
+    @javascripts('chotot')
 </head>
 <body>
-{{ Basset::show('gridster.js') }}
     <script type="text/javascript">
-
-        var chototSetting = {max_cols:10, runInterval:1000,idleInterval:5};
-
+        var chototSetting = {max_cols:{{$config->max_cols}}, runInterval:{{$config->runInterval}},idleInterval:{{$config->idleInterval}}};
     </script>
-    @javascripts('eee')
+
     <div class="gridster">
         <ul class="img-grid">
             @foreach ($ads as $ad)

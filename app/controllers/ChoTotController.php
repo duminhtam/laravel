@@ -4,24 +4,12 @@
 class ChoTotController extends BaseController {
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | Default Home Controller
-    |--------------------------------------------------------------------------
-    |
-    | You may wish to use controllers instead of, or in addition to, Closure
-    | based routes. That's great! Here is an example controller method to
-    | get you started. To route to this controller, just add the route:
-    |
-    |	Route::get('/', 'HomeController@showWelcome');
-    |
-    */
 
     public function getIndex()
     {
-
         $chotot = new ChoTot();
-        $data['ads'] = $chotot->getAds();
+        $data['ads']    = $chotot->getAds();
+        $data['config'] = $chotot->getConfig();
         if(!sizeof($data['ads'])){
             Redirect::to('chotot'); //first run redirect
         }
@@ -56,10 +44,8 @@ class ChoTotController extends BaseController {
             $result = null;
             $newAds = $chotot->getNewAds(Input::get('from')) ;
             if($newAds)
-                $result = "<li data-id='{$newAds->id }' title='{$newAds->title}' class='new'>
-           <div class='title'>{$newAds->title}</div>
-            <img atl='{$newAds->title}' src='{$newAds->img}'/></li>";
-                return Response::make("{$result}");
+                return View::make("chotot/push",array("ads"=>$newAds));
+            return Response::json();
         }
 
         $data['ads'] = $chotot->getAds(Input::get('from'), Input::get('to'));

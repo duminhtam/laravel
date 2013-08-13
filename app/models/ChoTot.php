@@ -8,6 +8,16 @@ class ChoTot extends Eloquent{
     var $_ads = array("result" => false,"data"=> array());
     var $_statusCode;
 
+    const CONFIG_MAX_COLS = 10; //col
+    const CONFIG_RUN_INTERVAL = 1000; //ms
+    const CONFIG_IDLE_INTERVAL = 5; //idle second
+
+    /**
+     * Get the default configuration base on const
+     * */
+    public function getConfig(){
+        return (object) array("max_cols" => self::CONFIG_MAX_COLS, "runInterval" => self::CONFIG_RUN_INTERVAL, "idleInterval" => self::CONFIG_IDLE_INTERVAL);
+    }
     /**
      * Get the current HTML from chotot.vn
      * @return string
