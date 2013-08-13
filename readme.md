@@ -185,7 +185,16 @@ Change the owner of all file and folder to <code>apache:root</code> when run mig
 
 <code>chown -R apache:root laravel</code>
 
+### JS config
 
+The js configuration is located in <code>app/models/ChoTot.php</code>
+
+<pre>
+    const CONFIG_MAX_COLS = 10; //col
+    const CONFIG_RUN_INTERVAL = 1000; //ms
+    const CONFIG_IDLE_INTERVAL = 5; //idle second
+
+</pre>
 ### Running
 All routes are configured in <code>app/routes.php</code> file.  
 Framework included index route still be kept
