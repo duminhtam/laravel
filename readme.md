@@ -43,12 +43,10 @@ Install Composer, take a look at [composer installation guide](http://getcompose
 <code>composer install --dev</code> <i>this will install with dev packages</i>
 
 ```php
-    <code>
-            'Basset\BassetServiceProvider'
-            'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
-            'Way\Generators\GeneratorsServiceProvider'
-            'Way\Console\GuardLaravelServiceProvider'
-    </code>
+    'Basset\BassetServiceProvider'
+    'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
+    'Way\Generators\GeneratorsServiceProvider'
+    'Way\Console\GuardLaravelServiceProvider'
 ```
 and aliases also </i>(in app.php bottom)</i>   
 
@@ -118,8 +116,7 @@ Other database support:
 A sample <b>mysql</b> config if you want to:
 
 ```php
-    <code>
-    'mysql' => array(  
+    'mysql' => array(
         		'driver'    => 'mysql',  
     			'host'      => 'localhost',  
     			'database'  => 'ads',  
@@ -129,7 +126,6 @@ A sample <b>mysql</b> config if you want to:
     			'collation' => 'utf8_unicode_ci',  
     			'prefix'    => '',  
     		),  
-    </code>
 ```
 
 and change the default database engine to <code>mysql</code> in <code>app/config/database.php</code>  
@@ -149,7 +145,6 @@ The migration schema file located in <code>app/config/database/migrations/2013_0
 This will create the table with <b>structured</b> and <b>view</b> bellow:
 ```php
     //file <b>2013_08_10_061829_create_ads_table.php</b>
-    <code>
     Schema::create('ads', function(Blueprint $table) {
     			$table->increments('id');
     			$table->string('title', 255);
@@ -174,7 +169,6 @@ This will create the table with <b>structured</b> and <b>view</b> bellow:
                           FROM ads
                           ORDER BY id DESC;
                           ');
-    </code>
 ```
 
 Database <code>stucture image</code> (<code>sqlite</code>):
@@ -193,7 +187,6 @@ The js configuration is located in <code>app/models/ChoTot.php</code>
     const CONFIG_MAX_COLS = 10; //col
     const CONFIG_RUN_INTERVAL = 1000; //ms
     const CONFIG_IDLE_INTERVAL = 5; //idle second
-
 ```
 ### Running
 All routes are configured in <code>app/routes.php</code> file.  
