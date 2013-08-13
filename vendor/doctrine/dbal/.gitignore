@@ -1,0 +1,7 @@
+build/
+logs/
+reports/
+dist/
+download/
+lib/Doctrine/Common/
+vendor/

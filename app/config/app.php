@@ -113,7 +113,12 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+        /* Add-on packages */
+        'Basset\BassetServiceProvider',
+        /* Uncomment for use in development */
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider',
+        'Way\Console\GuardLaravelServiceProvider'
 	),
 
 	/*
@@ -178,7 +183,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+        /* Add-on packages */
+        'Basset'          => 'Basset\Facade'
 	),
 
 );

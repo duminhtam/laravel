@@ -15,3 +15,10 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::group(array('before' => 'csrf'), function()
+{
+    Route::post('chotot/update', 'ChoTotController@postUpdate');
+});
+Route::controller("chotot",'ChoTotController');
+
