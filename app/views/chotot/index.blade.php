@@ -2,7 +2,7 @@
 <html class="not-ie6 not-ie7 not-ie8 not-ie9 " xmlns="http://www.w3.org/1999/xhtml"  lang="vi-VN">
 <head>
     <title>
-        Chotot.vn Crawler - Build 1
+        Chotot.vn Crawler - Build 5
     </title>
     @stylesheets('chotot')
     @javascripts('chotot')
