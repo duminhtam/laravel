@@ -176,7 +176,7 @@ This will create the table with <b>structured</b> and <b>view</b> bellow:
 
 Database <code>stucture image</code> (<code>sqlite</code>):
 
-![db structure image](https://lh5.googleusercontent.com/lzLtp0DuwVjdmRnN8DgyB1CIu9pnKgr52o1bSEib06uC7_8cMlLjfkO3ca7VpRTi_g=w1600)
+![db structure image](http://i.imgur.com/cRQDMpe.png)
 ### Running
 All routes are configured in <code>app/routes.php</code> file.  
 Framework included index route still be kept
@@ -189,6 +189,11 @@ Route::get('/', function()
 #### Index Route
 Browser URL:
 <code>/chotot</code>
+
+Image
+
+[chotot crawler index](http://i.imgur.com/WY5sL1b.png)
+
 #### Cron Route
 This will crawl frist 20 ads result in chotot.vn /hochiminh and store in db, return the json result also
 
@@ -197,7 +202,7 @@ Browser URL:
 
 JSON result image
 
-![a](https://lh3.googleusercontent.com/KUNgGXxaKGjevRmyerM9XEXDk-Y3YZ-7bsuYxbaay3N6dy-NXepnh6hlilCoGE23ew=w1600)
+![a](http://i.imgur.com/G8HnZqL)
 
 #### Update Route
 This post route is filtered by <code>csrf</code>. The <code>chotot/update</code> route only accept post method with <code>params</code> described bellow:
