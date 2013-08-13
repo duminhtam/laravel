@@ -1,6 +1,5 @@
-var gridster, token, choTot, idle= 0,currentCol = 0, storageID = [],to;
+var gridster, token, choTot, idle= 0,currentCol = 0, storageID = [],to,from;
 $(function() {
-
     choTot = {
         init : function(){
             this._createDragGrid();
